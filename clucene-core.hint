@@ -1,6 +1,5 @@
 category: Libs
-requires: libclucene0 libclucene-devel
-sdesc: "C++ indexing and searching library (meta-package)"
+sdesc: "C++ indexing and searching library (sources)"
 ldesc: "Lucene is a high-performance, scalable, cross platform, 
 full-featured, open-source indexing and searching API. It is written in 
 C++.

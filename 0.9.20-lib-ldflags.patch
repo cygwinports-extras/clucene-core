@@ -1,0 +1,11 @@
+--- origsrc/clucene-core-0.9.20/src/Makefile.am	2007-07-23 06:56:03.000000000 -0500
++++ src/clucene-core-0.9.20/src/Makefile.am	2008-05-18 11:49:59.468750000 -0500
+@@ -3,7 +3,7 @@
+ 
+ include_HEADERS = CLucene.h
+ lib_LTLIBRARIES        = libclucene.la
+-libclucene_la_LDFLAGS  = --version-info $(CLLIB_VERSION) --release $(PACKAGE_VERSION)
++libclucene_la_LDFLAGS  = -version-info $(CLLIB_VERSION) -no-undefined
+ 
+ lsrcdir 	= $(top_srcdir)/src/CLucene
+ EXTRA_DIST 	= $(lsrcdir)/CLMonolithic.cpp \
