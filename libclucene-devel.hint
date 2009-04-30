@@ -1,5 +1,5 @@
 category: Libs
-requires: cygwin libclucene0 libstdc++6-devel
+requires: cygwin libclucene3 libstdc++6-devel
 external-source: clucene-core
 sdesc: "C++ indexing and searching library (development)"
 ldesc: "Lucene is a high-performance, scalable, cross platform, 
