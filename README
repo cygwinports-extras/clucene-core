@@ -9,19 +9,21 @@ stuff. You write the easy stuff, the UI and the process of selecting and
 parsing your data files to pump them into the search engine yourself.
 
 Runtime requirements:
-  cygwin-1.5.25-15
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libstdc++6-4.3.2-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.9-1.9.6-3
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  libtool-2.2.6a-1
-  make-3.81-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  libtool-2.2.7a-12
+  make-3.81-2
   sed-4.1.5-2
 
 Canonical website:
@@ -50,11 +52,10 @@ Files included in the binary packages:
 
 (libclucene3)
   /usr/bin/cygclucene-3.dll
-  /usr/share/doc/clucene-core-0.9.21b/AUTHORS
-  /usr/share/doc/clucene-core-0.9.21b/COPYING
-  /usr/share/doc/clucene-core-0.9.21b/HACKING
-  /usr/share/doc/clucene-core-0.9.21b/INSTALL
-  /usr/share/doc/clucene-core-0.9.21b/README
+  /usr/share/doc/clucene-core/AUTHORS
+  /usr/share/doc/clucene-core/COPYING
+  /usr/share/doc/clucene-core/HACKING
+  /usr/share/doc/clucene-core/README
 
 (libclucene-devel)
   /usr/include/CLucene.h
@@ -195,11 +196,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 0.9.21b-1 -----
-Version bump.
-
------ version 0.9.20-1 -----
-Initial release for Cygwin.
+----- version 0.9.21b-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

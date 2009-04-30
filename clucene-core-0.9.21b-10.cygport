@@ -4,6 +4,7 @@ SRC_URI="mirror://sourceforge/clucene/${P}.tar.bz2"
 PATCH_URI="
 	0.9.20-aclocal-amflags.patch
 	0.9.20-lib-ldflags.patch
+	0.9.21b-cygwin17.patch
 "
 
 PKG_NAMES="${PN} libclucene3 libclucene-devel"
