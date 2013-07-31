@@ -1,0 +1,26 @@
+inherit cmake
+
+NAME="clucene-core"
+VERSION=2.3.3.4
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="C++ indexing and searching library"
+DESCRIPTION="Lucene is a high-performance, scalable, cross platform, full-
+featured, open-source indexing and searching API. It is written in C++.
+CLucene is a port of the very popular Java Lucene text search engine API."
+HOMEPAGE="http://clucene.sourceforge.net/"
+SRC_URI="mirror://sourceforge/clucene/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="
+	2.3.3.4-cygwin.patch
+	2.3.3.4-dll-install.patch
+	2.3.3.4-pkgconfig-libs.patch
+	2.3.3.4-system-boost.patch
+"
+
+PKG_NAMES="libclucene-core1 libclucene-core-devel"
+libclucene_core1_CONTENTS="usr/bin/cygclucene-*-1.dll usr/share/doc/"
+libclucene_core_devel_OBSOLETES="libclucene-devel"
+libclucene_core_devel_CONTENTS="usr/include/ usr/lib/"
+
+# we want to use malloc instead
+CYGCMAKE_ARGS="-D_CL_HAVE_FUNCTION_MAPVIEWOFFILE=0"

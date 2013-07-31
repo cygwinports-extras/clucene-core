@@ -1,0 +1,30 @@
+--- origsrc/clucene-core-2.3.3.4/src/shared/CLucene/_clucene-config.h.cmake	2011-03-16 19:21:07.000000000 -0500
++++ src/clucene-core-2.3.3.4/src/shared/CLucene/_clucene-config.h.cmake	2013-07-30 15:56:19.192874600 -0500
+@@ -98,13 +98,6 @@ ${FUNCTION_SLEEPFUNCTION}
+ 
+ /* Compiler oddities */
+ 
+-//not sure why, but cygwin reports _S_IREAD, but doesn't actually work...
+-//TODO: make this work properly (this bit shouldn't be necessary)
+-#ifdef __CYGWIN__
+-    #define _S_IREAD 0333
+-    #define _S_IWRITE 0333
+-#endif
+-
+ #ifdef __BORLANDC__ //borland compiler
+     #define O_RANDOM 0
+ #endif
+--- origsrc/clucene-core-2.3.3.4/src/shared/cmake/MacroChooseSymbol.cmake	2011-03-16 19:21:07.000000000 -0500
++++ src/clucene-core-2.3.3.4/src/shared/cmake/MacroChooseSymbol.cmake	2013-07-30 15:47:49.812739700 -0500
+@@ -6,11 +6,6 @@ MACRO(CHOOSE_SYMBOL name options)
+     #note: don't add windows.h to this list, since we don't want to find things 
+     #in there (bcc might make you think otherwise, but it's true!)...
+     
+-    IF ( CYGWIN )
+-        #cygwin requires this to determine some things...
+-        SET ( CMAKE_REQUIRED_DEFINITIONS "-D_WIN32")
+-    ENDIF( CYGWIN )
+-    
+     IF ( HAVE_LIMITS_H )
+     	SET (CHOOSE_SYMBOL_INCLUDES "${CHOOSE_SYMBOL_INCLUDES};limits.h")
+     ENDIF ( HAVE_LIMITS_H )
