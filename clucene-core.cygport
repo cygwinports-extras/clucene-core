@@ -2,7 +2,7 @@ inherit cmake
 
 NAME="clucene-core"
 VERSION=2.3.3.4
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="C++ indexing and searching library"
 DESCRIPTION="Lucene is a high-performance, scalable, cross platform, full-
